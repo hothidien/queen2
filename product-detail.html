@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/pr-15.png">
+    <title> Queen</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/easyzoom.css   ">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container header">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-3 logo">  
+            <a href="#"><img src="image/logo_png.png" ></a>    
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-5 col-3 formsearch">
+            <button id="btn-search-close" ><i class="fa-solid fa-close"></i></button>
+            <div class="row">
+                <div class="col-10 p-0">
+                    <input type="text" placeholder= "Tìm kiếm">
+                </div>
+                <div class="col-2 p-0">
+                    <button class="btn-search"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+         <div class="col-lg-3 col-md-4  col-sm-3 col-6 nav-icon d-flex">
+            <a href="http://127.0.0.1:5500/payment">
+            <div class="icon-text">
+                    <i class="fa fa-user"></i>
+                    <span>Đăng nhập</span>
+                </div>
+             </a>
+            <a href="http://127.0.0.1:5500/product-cart">
+            <div class="icon-text">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Giỏ hàng</span>
+            </div>
+            </a>
+
+        </div>
+    </div>
+</header>
+<div class="nav">
+    <div class="container pd-0">
+        <div class="row">
+        <div class="col-lg-3 col-md-1 col-sm-1 col-1">
+            <div class="dropdown ">
+                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Danh mục sản phẩm <i class="fa-solid fa-bars"></i>
+                </a>
+                <ul class="dropdown-menu mt-3" style="margin-left: -50px;">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức vàng</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức bạc</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức kim cương</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đá quý</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đồng hồ</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Phụ kiện</a></li>
+                </ul>
+             </div>
+         </div>
+     
+        <div class="col-lg-9 col-md-11 col-sm-11 col-11 nav-right">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/">Trang chủ</a> </li>
+                <li><a href="http://127.0.0.1:5500/product">Sản phẩm</a> </li>
+                <li><a href="http://127.0.0.1:5500/product-detail">Khuyến mãi</a> </li>
+                <li><a href="http://127.0.0.1:5500/">Tin tức</a> </li>
+                <li><a href="http://127.0.0.1:5500/payment">Thanh toán</a> </li>
+                <li><a href="#">Liên hệ</a> </li>
+            </ul>
+        </div>
+
+        </div>
+    </div>    
+</div>
+<div class="container bg-page-tittle">
+    <ul>
+        <li><a href="http://127.0.0.1:5500/">Trang chủ</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="http://127.0.0.1:5500/product"  >Sản phẩm</a></li> 
+        <li><i class="fa-solid fa-chevron-right"></i></li> 
+        <li><a href="http://127.0.0.1:5500/product-detail"  >Nhẫn </a></li> 
+        <li><i class="fa-solid fa-chevron-right"></i></li> 
+        <li><a href="http://127.0.0.1:5500/product-detail" class="active">Nhẫn vàng đính đá</a></li>        
+    </ul>
+</div>
+ <!-- zoom sản phẩm-->
+ <div class="container mt-5 ">
+    <div class="row ">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-12 zoom-product">
+            <section id="example "  >
+                <div class="row">
+                    <div class="col-lg-3 col-sm-3 col-3 thumbnails" >
+                            <ul  class="owl-carousel owl-theme">
+                                <li class="item">
+                                    <a href="image/zoom-pr-1.png" data-standard="image/pr-d-1.png">
+                                        <img src="image/thum-nail-1.png" alt="" />
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="image/zoom-pr-2.jpg" data-standard="image/pr-d-2.png">
+                                        <img src="image/thum-nail-2.png" alt="" />
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="image/zoom-pr-3.jpg" data-standard="image/thum-nail-3.png">
+                                        <img src="image/pr-d-3.png" alt="" />
+                                    </a>
+                                </li>
+                        
+                              </ul>
+                    </div>
+                    <div class="col-lg-9 col-sm-9 col-9">
+                         <div class="easyzoom easyzoom--overlay easyzoom--with-thumbnails">
+                            <a href="image/zoom-pr-1.png">
+                                <img src="image/pr-d-1.png" alt="" class="w-100 pr-detail-d-img">
+                            </a>
+                         </div>
+                    </div>
+                </div>
+               
+            <!--paging-->
+            <div class="thum-nav">
+                <button><i class="fa-solid fa-angle-up" style="color: #fff;;font-weight: 50px;"></i></button>
+                <button><i class="fa-solid fa-angle-down" style="color: #fff;font-weight: 50px;"></i></button>
+            </div>
+                
+
+            </section>
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-12">
+            <div class="title-detail-pr">
+                <h3>Nhẫn PANTHÈRE DE CARTIER  </h3>
+                <div class="content-detail-pr">
+                    <h4>SKU: PDC</h4>
+                    <h5>Barcode: <span>H4406500</span></h5>
+                    <h5>Các bộ sưu tập: <a href="#"><b>Earrings, Key chains</b></a></h5>
+                    <h5>Loại sản phẩm: Ruby</h5>
+                    <h5>Vendor: Queen</h5>
+                    
+                </div>
+                  <div class="add-cart">
+                        <!-- <div class="row"> -->
+                                <!-- <div class="col-lg-6"> -->
+                                    <h2>12.248.000 VNĐ</h2>
+                                    <!-- <div class="row d-flex"> -->
+                                        <!-- <div class="col-6"> -->
+                                    <div class="quantity-selector">
+                                                <button type="button" class="qty-btn" id="decrease">-</button>
+                                                <input type="text" id="quantity" value="1" readonly>
+                                                <button type="button" class="qty-btn" id="increase">+</button>                                    
+                                            </div> 
+                                <div class="btn">
+                                    <button class="btn-mua-ngay">Mua ngay</button>
+                                    <button class="btn-add-to-cart " >Thêm vào giỏ hàng</button>
+                                </div>        
+                                    
+                                <!-- </div> -->
+                                        
+                                            
+                                    <!-- </div>
+                                
+                                 
+                                 
+                                <div> -->
+                                    <ul class="payment-detail">
+                                            <a href="#"><li><i class="fa-brands fa-facebook"></i></li></a>
+                                            <a href="#"><li><i class="fa-brands fa-linkedin"></i></li></a>
+                                            <a href="#"><li><i class="fa-brands fa-google"></i></li></a>
+                                            <a href="#"><li><i class="fa-brands fa-youtube"></i></li></a>
+                                            <a href="#"><li><i class="fa-brands fa-tiktok"></i></li></a>
+                                        
+                                    </ul>
+                                <!-- </div> -->
+                            </div>
+                        </div>      
+                    </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <!-- Tab nav -->
+     
+    <ul class="nav nav-tabs" id="descTab" role="tablist">
+        <div class="line"></div>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button" role="tab">
+            CHI TIẾT SẢN PHẨM
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="ship-tab" data-bs-toggle="tab" data-bs-target="#ship" type="button" role="tab">
+            VẬN CHUYỂN & ĐỔI TRẢ
+            </button>
+        </li>
+    </ul>
+    <!-- Tab content -->
+    <div class="tab-content pt-3" id="descTabContent">
+    <div class="tab-pane fade show active" id="desc" role="tabpanel" aria-labelledby="desc-tab">
+        <p>Nhẫn Panthère de Cartier là một trong những biểu tượng trang sức nổi bật nhất của thương hiệu Cartier, lấy cảm hứng từ hình tượng báo gấm – loài vật tượng trưng cho sự mạnh mẽ, tự do và quyến rũ. Ra mắt lần đầu vào năm 1914, bộ sưu tập này đã trở thành biểu tượng vượt thời gian của nhà kim hoàn Pháp.</p>
+        <p>Thiết kế đặc trưng<br>Nhẫn Panthère de Cartier thường được chế tác từ các chất liệu quý như vàng trắng, vàng hồng hoặc vàng vàng 18K, kết hợp với các loại đá quý như ngọc lục bảo (emerald), đá onyx, sơn mài đen và kim cương. Thiết kế thường mô phỏng đầu báo với hai mắt ngọc lục bảo hoặc tsavorite garnet, mũi và tai bằng đá onyx, tạo nên vẻ ngoài sống động và đầy cá tính.</p>
+        <p>Một số mẫu nổi bật</p>
+        <ul>
+            <li>Nhẫn vàng trắng 18K: Gắn 2 viên ngọc lục bảo, đá onyx và 72 viên kim cương cắt brilliant, tổng trọng lượng 0.68 carat. cartier.sg+1int.cartier.com+1</li>
+            <li>Nhẫn vàng hồng 18K: Kết hợp với tsavorite garnet, đá onyx và sơn mài đen, mang đến vẻ đẹp sang trọng và hiện đại. Cartier+7hoangvertu.com.vn+7Cartier+7</li>
+            <li>Nhẫn vàng vàng 18K: Sử dụng đá tsavorite và onyx, thiết kế mạnh mẽ và cá tính, phù hợp cho cả nam và nữ.</li>
+        
+        </ul>
+    </div>
+    <div class="tab-pane fade" id="ship" role="tabpanel" aria-labelledby="ship-tab">
+        <p>Đối với thương hiệu sản phẩm Cartier cho phép đổi hoặc trả lại trong vòng 30 ngày kể từ ngày nhận hàng cho những sản phẩm mua từ website hoặc qua điện thoại</p>
+        <p>Đối với nhẫn Panthère de Cartier:</p>
+        <ul>
+            <li>Sản phẩm phải ở tình trạng mới, chưa sử dụng, và còn nguyên vẹn các phụ kiện, tem mác, hộp bảo vệ</li>
+            <li>Các sản phẩm đã khắc tên, cá nhân hóa, thay đổi, hoặc điều chỉnh (như chỉnh dây đồng hồ) sẽ không được chấp nhận trả lại hoặc đổi</li>
+            <li>Chỉ áp dụng cho các mẫu còn trong bộ sưu tập hiện hành (không đổi/mua các mẫu đã ngừng sản xuất)</li>
+            <li>Quy trình trả hàng qua bưu điện: khách hàng cần truy cập Cartier Returns Portal (qua QR code hoặc email), đóng gói sản phẩm theo hướng dẫn, dùng mã trả hàng (pre-paid label) do Cartier cung cấp để gửi lại</li>
+            <li>Cần giữ biên nhận hoặc ảnh chụp vận chuyển để theo dõi giai đoạn xử lý</li>
+            <li>Sau khi Cartier nhận hàng và kiểm tra đạt yêu cầu, việc xử lý đổi/trả hoặc hoàn tiền có thể mất khoảng 5–7 ngày làm việc</li>
+            
+        </ul>
+    </div>
+    </div>
+</div>
+<div class="container main-pr" >
+    <h1>SẢN PHẨM ĐÃ XEM</h1>
+    <div class="row product-row">
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="#"><img src="image/pr-13.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="#"><h2>Dây chuyền kim cương</h2></a>
+                <a href="#"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="#"><img src="image/pr-14.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="#"><h2> Dây chuyền kim cương</h2></a>
+                <a href="#"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="#"><img src="image/pr-15.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="#"><h2> Dây chuyền kim cương</h2></a>
+                <a href="#"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>       
+        
+    </div>
+</div>
+
+</body>
+
+<footer class="bg-footer mt-5  ">
+    <div class="container">
+        <div class="row  ">
+            <div class="  col-lg-6 col-md-3 footer-logo">
+                <img src="image/logo_png.png" >
+                <p>Queen là thương hiệu trang sức nam nữ cao cấp </br>đem đến sự sang trọng, quý phái và may mắn</p>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>290 Bạch Đằng, Phường 14, Quận Bình Thạnh, HCM</p>
+                      </div>
+                </div>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer content">
+                         <p>Gmail <span> queen@email.com</span> </p>
+                    </div>
+                  
+                </div>
+                <div class="info">
+                      <div class="footer-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>demo@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 ">
+                <h4 class="footer-tittle">Sản phẩm</h4>
+                <ul class="footer-nav">
+                    <li><a href="http://127.0.0.1:5500/product">Nhẫn nam nữ</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Vòng tay </a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Khuyên tai</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Lắc chân</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Dịch vụ</h4>
+                <ul class="footer-nav">
+                     <li><a href="http://127.0.0.1:5500/product-cart">Giao hàng</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Quà tặng </a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Tư vấn</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Thanh toán</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Khác</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Tài khoản</h4>
+                <ul class="footer-nav">
+                     <li><a href="http://127.0.0.1:5500/payment">Đăng ký</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Đăng nhập</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Hồ sơ tài khoản</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="line"></div>
+<div class="container ">
+    <div class="row">
+        <div class="sub-form col-lg-3">
+            <input type="text" placeholder="Enter your mail ">
+
+        </div>
+        <div class="col-lg-9 social">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-square-instagram"></i></a></li>
+            </ul>
+           
+        </div>
+    </div>
+</div>
+</footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/easyzoom.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        var prdetail=$('.pr-detail-d-img').height ();
+        $('.thumbnails').height(prdetail);
+		// Instantiate EasyZoom instances
+		var $easyzoom = $('.easyzoom').easyZoom();
+
+		// Setup thumbnails example
+		var api1 = $easyzoom.filter('.easyzoom--with-thumbnails').data('easyZoom');
+
+		$('.thumbnails').on('click', 'a', function(e) {
+			var $this = $(this);
+
+			e.preventDefault();
+
+			// Use EasyZoom's `swap` method
+			api1.swap($this.data('standard'), $this.attr('href'));
+		});
+
+		// Setup toggles example
+		var api2 = $easyzoom.filter('.easyzoom--with-toggle').data('easyZoom');
+
+		$('.toggle').on('click', function() {
+			var $this = $(this);
+
+			if ($this.data("active") === true) {
+				$this.text("Switch on").data("active", false);
+				api2.teardown();
+			} else {
+				$this.text("Switch off").data("active", true);
+				api2._init();
+			}
+		});
+        
+	</script>
+
+
+</html>

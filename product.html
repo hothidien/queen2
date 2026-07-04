@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/pr-15.png">
+    <title> Queen</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container header">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-3 logo">  
+            <a href="#"><img src="image/logo_png.png" ></a>    
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-5 col-3 formsearch">
+            <button id="btn-search-close" ><i class="fa-solid fa-close"></i></button>
+            <div class="row">
+                <div class="col-10 p-0">
+                    <input type="text" placeholder= "Tìm kiếm">
+                </div>
+                <div class="col-2 p-0">
+                    <button class="btn-search"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+          <div class="col-lg-3 col-md-4  col-sm-3 col-6 nav-icon d-flex">
+            <a href="http://127.0.0.1:5500/payment">
+            <div class="icon-text">
+                    <i class="fa fa-user"></i>
+                    <span>Đăng nhập</span>
+                </div>
+             </a>
+            <a href="http://127.0.0.1:5500/product-cart">
+            <div class="icon-text">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Giỏ hàng</span>
+            </div>
+            </a>
+
+        </div>
+    </div>
+</header>
+<div class="nav">
+    <div class="container pd-0">
+        <div class="row">
+        <div class="col-lg-3 col-md-1 col-sm-1 col-1">
+            <div class="dropdown ">
+                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Danh mục sản phẩm <i class="fa-solid fa-bars"></i>
+                </a>
+                <ul class="dropdown-menu mt-3" style="margin-left: -50px;">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức vàng</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức bạc</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức kim cương</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đá quý</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đồng hồ</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Phụ kiện</a></li>
+                </ul>
+             </div>
+         </div>
+     
+        <div class="col-lg-9 col-md-11 col-sm-11 col-11 nav-right">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/">Trang chủ</a> </li>
+                <li><a href="http://127.0.0.1:5500/product">Sản phẩm</a> </li>
+                <li><a href="http://127.0.0.1:5500/product-detail">Khuyến mãi</a> </li>
+                <li><a href="http://127.0.0.1:5500/">Tin tức</a> </li>
+                <li><a href="http://127.0.0.1:5500/payment">Thanh toán</a> </li>
+                <li><a href="#">Liên hệ</a> </li>
+            </ul>
+        </div>
+
+        </div>
+    </div>    
+</div>
+<div class="container bg-page-tittle">
+    <ul>
+        <li><a href="http://127.0.0.1:5500/">Trang chủ</a></li>
+        <li> <i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="http://127.0.0.1:5500/product" class="active">Sản phẩm</a></li>        
+    </ul>
+</div>
+<!--bộ lọc filter-->
+<div class="container mt-5">
+    <div class="row">
+        <button id="btn-filter">Filter<i class="fa-solid fa-filter"></i></button>
+        <div class="col-lg-4" id="sidebar">
+           <button id="sidebar-close"><i class="fa-solid fa-rectangle-xmark"></i></button> 
+            <div class="filter-box">
+                <h4 class="filter-title">Loại trang sức</h4>
+                <div class="form-check mt-3 ">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Vòng tay</label>
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Vòng cổ</label>
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Khuyên tai</label>
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Mặt dây chuyền</label>
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Khuyên tai</label>
+                </div>
+                <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Nhẫn</label>
+                </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Đồng hồ</label>
+                </div>                
+            </div>
+             <!---->
+            <div class="filter-box">
+                    <h4 class="filter-title">Chất liệu</h4>
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Kim cương</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Vàng</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Bạc</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Đồng</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Thạch quý</label>
+                    </div>
+                     <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Khác</label>
+                    </div>                
+            </div>
+            <!---->
+           <div class="filter-box">
+                    <h4 class="filter-title">Thương hiệu</h4>
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Panthère de Cartier</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Repositi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Dirce Repossi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Dior Joaillerie</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Cartier</label>
+                    </div>  
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">Khác</label>
+                    </div>              
+            </div>
+            <!---->
+            <div class="filter-box">
+                    <h4 class="filter-title">Giá</h4>
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label"> Dưới 15 .000.000đ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">15.000.000đ - 25.000.000đ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">25.000.000đ - 50.000.000đ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="formcheck-label">> 50.000.000đ</label>
+                    </div>
+                                
+            </div>
+            <!---->
+            <div class="filter-box">
+                    <h4 class="filter-title">Filter by Dimention</h4>
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                    </div>
+                    <ul class="filter-rating">                             
+                           <li><i class="fa-solid fa-star"  ></i></li> 
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                           <li><i class="fa-solid fa-star"></i> </li>                        
+                    </ul>  
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                    </div>
+                    <ul class="filter-rating star1">                             
+                           <li><i class="fa-solid fa-star"  ></i></li> 
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                           <li><i class="fa-solid fa-star"></i> </li>                        
+                    </ul> 
+                        <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                    </div>
+                    <ul class="filter-rating star2">                             
+                           <li><i class="fa-solid fa-star"  ></i></li> 
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                           <li><i class="fa-solid fa-star"></i> </li>                        
+                    </ul> 
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                    </div>
+                    <ul class="filter-rating star3">                             
+                           <li><i class="fa-solid fa-star"  ></i></li> 
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                           <li><i class="fa-solid fa-star"></i> </li>                        
+                    </ul> 
+                    <div class="form-check mt-3">
+                        <input type="checkbox" class="form-check-input">
+                    </div>
+                    <ul class="filter-rating star4">                             
+                           <li><i class="fa-solid fa-star"  ></i></li> 
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                            <li><i class="fa-solid fa-star"></i></li>
+                           <li><i class="fa-solid fa-star"></i> </li>                        
+                    </ul>                              
+            </div>
+        </div>
+        <!--hết filter box menu-->
+    
+       <div class="col-lg-8 main-pr-2">
+            <div class="row pr-row">
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-5.png" alt="" class=""></a>
+                    <div class="tag-sale" style="background-color:#A86D39">
+                        <p>New</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Khuyên tai đính ngọc</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3> Khuyên tai ngọc</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-2.png" alt="" class=""></a>
+                    <div class="tag-sale" style="background-color: #A86D39;">
+                        <p>New</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Dây chuyền vàng</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3> Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-3.png" alt="" class=""></a>
+                    <div class="tag-sale">
+                        <p>Mới</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Nhẫn vàng</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3> Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-9.png" alt="" class=""></a>
+                    <div class="tag-sale">
+                        <p>Mới</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Khuyên tai đính đá</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3> Kim cương</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-4.png" alt="" class=""></a>
+                    <div class="tag-sale" style="background-color: #A86D39;">
+                        <p>New</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Vòng tay vàng</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3>Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-8.png" alt="" class=""></a>
+                    <div class="tag-sale" style="background-color: #A86D39;">
+                        <p>New</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Vòng tay vàng</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3>Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-15.png" alt="" class=""></a>
+                    <div class="tag-sale">
+                        <p>Mới</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="http://127.0.0.1:5500/product"><h2>Nhẫn vàng</h2></a>
+                        <a href="http://127.0.0.1:5500/product"><h3>Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+                <div class="col-lg-6 col-md-6 col-12 tag-pr-2">
+                    <a href="http://127.0.0.1:5500/"><img src="image/pr-16.png" alt="" class=""></a>
+                    <div class="tag-sale">
+                        <p>Mới</p>
+                    </div>
+                    <div class="container-pr-2">
+                        <a href="#"><h2>Vòng tay vàng</h2></a>
+                        <a href="#"><h3> Vàng</h3></a>
+                        <div class="row price-pr-2">
+                                <div class="price-old-2 col-lg-6">
+                                    <p>16.150.000đ</p>
+                                </div>
+                                <div class="price-new-2 col-lg-6">
+                                    <p> 15.000.000đ</p>
+                                </div>
+                        </div>                    
+                        
+                    </div>
+                </div> 
+            </div> 
+        </div>
+     </div>   
+        <!---->
+        <div class="col-lg-12 ">
+            <nav aria-label="Page navigation example" class="paging">
+                <ul class="pagination">
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link active" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!---->
+    </div>
+</div>
+<!--sản phẩm mới-->
+<div class="container main-pr" >
+    <h1>SẢN PHẨM MỚI</h1>
+    <div class="row product-row">
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="http://127.0.0.1:5500/"><img src="image/pr-13.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="http://127.0.0.1:5500/product"><h2>Dây chuyền kim cương</h2></a>
+                <a href="http://127.0.0.1:5500/product"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="http://127.0.0.1:5500/"><img src="image/pr-14.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="http://127.0.0.1:5500/product"><h2> Dây chuyền kim cương</h2></a>
+                <a href="http://127.0.0.1:5500/product"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 tag-pr">
+            <a href="http://127.0.0.1:5500/"><img src="image/pr-15.png" alt="" class=""></a>
+            <div class="tag-sale">
+                <p>Mới</p>
+            </div>
+            <div class="container-pr">
+                <a href="http://127.0.0.1:5500/product"><h2> Dây chuyền kim cương</h2></a>
+                <a href="http://127.0.0.1:5500/product"><h3> Kim cương</h3></a>
+                <div class="row price-pr">
+                        <div class="price-old col-lg-6">
+                            <p>16.150.000đ</p>
+                        </div>
+                        <div class="price-new col-lg-6">
+                            <p> 15.000.000đ</p>
+                        </div>
+                </div>                    
+                
+            </div>
+        </div>       
+        
+    </div>
+</div>
+             
+</body>
+
+<footer class="bg-footer mt-5  ">
+    <div class="container">
+        <div class="row  ">
+            <div class="  col-lg-6 col-md-3 footer-logo">
+                <img src="image/logo_png.png" >
+                <p>Queen là thương hiệu trang sức nam nữ cao cấp </br>đem đến sự sang trọng, quý phái và may mắn</p>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>290 Bạch Đằng, Phường 14, Quận Bình Thạnh, HCM</p>
+                      </div>
+                </div>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer content">
+                         <p>Gmail <span> queen@email.com</span> </p>
+                    </div>
+                  
+                </div>
+                <div class="info">
+                      <div class="footer-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>demo@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 ">
+                <h4 class="footer-tittle">Sản phẩm</h4>
+                <ul class="footer-nav">
+                    <li><a href="http://127.0.0.1:5500/product">Nhẫn nam nữ</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Vòng tay </a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Khuyên tai</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Lắc chân</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Dịch vụ</h4>
+                <ul class="footer-nav">
+                    <li><a href="http://127.0.0.1:5500/product-cart">Giao hàng</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Quà tặng </a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Tư vấn</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Thanh toán</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Khác</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Tài khoản</h4>
+                <ul class="footer-nav">
+                    <li><a href="http://127.0.0.1:5500/payment">Đăng ký</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Đăng nhập</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Hồ sơ tài khoản</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="line"></div>
+<div class="container ">
+    <div class="row">
+        <div class="sub-form col-lg-3">
+            <input type="text" placeholder="Enter your mail ">
+
+        </div>
+        <div class="col-lg-9 social">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-square-instagram"></i></a></li>
+            </ul>
+           
+        </div>
+    </div>
+</div>
+</footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+   
+
+</html>

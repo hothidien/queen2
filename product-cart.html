@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/pr-15.png">
+    <title> Queen</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/easyzoom.css   ">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container header">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-3 logo">  
+            <a href="#"><img src="image/logo_png.png" ></a>    
+        </div>
+        <div class="col-lg-6 col-md-4 col-sm-5 col-3 formsearch">
+            <button id="btn-search-close" ><i class="fa-solid fa-close"></i></button>
+            <div class="row">
+                <div class="col-10 p-0">
+                    <input type="text" placeholder= "Tìm kiếm">
+                </div>
+                <div class="col-2 p-0">
+                    <button class="btn-search"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+          <div class="col-lg-3 col-md-4  col-sm-3 col-6 nav-icon d-flex">
+            <a href="http://127.0.0.1:5500/payment">
+            <div class="icon-text">
+                    <i class="fa fa-user"></i>
+                    <span>Đăng nhập</span>
+                </div>
+             </a>
+            <a href="http://127.0.0.1:5500/product-cart">
+            <div class="icon-text">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Giỏ hàng</span>
+            </div>
+            </a>
+
+        </div>
+    </div>
+</header>
+<div class="nav">
+    <div class="container pd-0">
+        <div class="row">
+        <div class="col-lg-3 col-md-1 col-sm-1 col-1">
+            <div class="dropdown ">
+                <a class=" dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Danh mục sản phẩm <i class="fa-solid fa-bars"></i>
+                </a>
+                <ul class="dropdown-menu mt-3" style="margin-left: -50px;">
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức vàng</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức bạc</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Trang sức kim cương</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đá quý</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Đồng hồ</a></li>
+                    <li><a class="dropdown-item" href="http://127.0.0.1:5500/product">Phụ kiện</a></li>
+                </ul>
+             </div>
+         </div>
+     
+        <div class="col-lg-9 col-md-11 col-sm-11 col-11 nav-right">
+            <ul>
+                <li><a href="http://127.0.0.1:5500/">Trang chủ</a> </li>
+                <li><a href="http://127.0.0.1:5500/product">Sản phẩm</a> </li>
+                <li><a href="http://127.0.0.1:5500/product-detail">Khuyến mãi</a> </li>
+                <li><a href="http://127.0.0.1:5500/">Tin tức</a> </li>
+                <li><a href="http://127.0.0.1:5500/payment">Thanh toán</a> </li>
+                <li><a href="#">Liên hệ</a> </li>
+            </ul>
+        </div>
+
+        </div>
+    </div>    
+</div>
+<div class="container bg-page-tittle">
+    <ul>
+        <li><a href="http://127.0.0.1:5500/">Trang chủ</a></li>
+        <li><i class="fa-solid fa-chevron-right"></i></li>
+        <li><a href="http://127.0.0.1:5500/product-cart" class="active"  >Giỏ hàng</a></li> 
+             
+    </ul>
+</div>
+<!--giỏ hàng-->
+<div class="container mt-5 ">
+    <div class="row bg-form-infor d-flex">
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 progress-info ">
+              <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="truck" id="truck"><i class="fa-solid fa-truck"></i></div>                 
+                </div>
+                <h6 class="mt-3">Hóa đơn từ <b>20.000.000đ</b> trở lên được <b> miễn phí vận chuyển</b></h6>
+                <div class="total-bill">
+                    <h3 class="title-bill">Tổng đơn hàng</h3>
+                    <ul>
+                        <li><span>Tạm tính</span> Tổng đơn hàng</li>
+                        <li>115.000.000đ</li>
+                    </ul>
+                </div>
+              <form class="shipping-form" id="shippingForm">
+                    <h3>Thông tin tra phí vận chuyển & giao hàng</h3>
+
+                    <label>Quốc gia</label>
+                    <select id="country">
+                        <option value="">Chọn quốc gia</option>
+                        <option value="VN">Việt Nam</option>
+                    </select>
+
+                    <label>Tỉnh thành phố</label>
+                    <select id="city">
+                        <option value="">Tỉnh thành phố</option>
+                        <option value="Hanoi">Hà Nội</option>
+                        <option value="HCM">TP. Hồ Chí Minh</option>
+                        <option value="Danang">Đà Nẵng</option>
+                        <option value="Other">Khác</option>
+                    </select>
+
+                    <label>Quận/Phường/Xã</label>
+                    <select id="ward">
+                        <option value="">Quận/Phường/Xã</option>
+                        <option value="Phường 1">Phường 1</option>
+                        <option value="Phường 2">Phường 2</option>
+                        <option value="Phường 3">Phường 3</option>
+                        <option value="Other">Khác</option>
+                    </select>
+
+                    <label>Địa chỉ cụ thể</label>
+                    <input type="text" placeholder="Số nhà, tên đường">
+
+                    <label>Mã bưu chính</label>
+                    <input type="text" placeholder="Nhập mã bưu chính">
+
+                    <button class="btn-paybill" type="submit">Phí vận chuyển</button>
+
+                    <div class="result" id="result"></div>
+            </form>
+            <div class="code-voucher">
+                <h3>Mã giảm giá</h3>
+                <p>Nhập mã giảm giá để áp dụng tại bước thanh toán</p>
+                <h4>Nhập mã ưu đãi </h4>
+                <input id="code-voucher" type="text" placeholder="Nhập mã ưu đãi">
+            </div>
+            <div class="pay-bill">
+                <div class="save">
+                    <p>Tiết kiệm</p>
+                    <h5>5.000.000đ</h5>
+                </div>
+                <div class="total-pay">
+                    <p>Tổng thanh toán</p> 
+                    <h2>110.000.000đ</h2> 
+                </div>
+            </div>
+            <div class="police">
+                <p>Thuế và phí vân chuyển  sẽ dược tính tại trang thanh toán</p>
+                <input type="checkbox" id="agree" />
+                <label for="agree">
+                    Tôi đồng ý với <a href="#"><b>điều khoản & điều kiện</b></a>
+                </label>
+                <button class="btn-paybill">Thanh toán</button>
+            </div>
+         </div>   
+    
+                
+   
+    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 ">
+            <div class="cart-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Tạm tính</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body" >
+                        <tr   >
+                            <td class="product-info ">
+                                <img src="image/pr-pay-bill-1.png" class="product-img " />
+                                <div>
+                                    <p class="product-title">Nhẫn Panthère de Cartier</p>
+                                    <p class="product-sub">Chất liệu: Vàng</p>
+                                    <p class="product-sub">Size: M</p>
+                                    <p class="product-price">12.248.000 VNĐ</p>
+                                </div>
+                            </td>
+                            <td class="qty-box  ">
+                                <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+                                <input type="text" value="1" class="qty" readonly />
+                                <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+                            </td>
+                            <td class="subtotal  " data-price="12248000">12.248.000 VNĐ</td>
+                            <td  ><button class="remove-btn " onclick="removeRow(this)"><i class="fa-solid fa-trash-can" style="color:#fff;font-size:20px"></i></button></td>
+                        </tr>
+                    </tbody>
+                    <tbody id="cart-body" >
+                        <tr   >
+                            <td class="product-info ">
+                                <img src="image/pr-pay-bill-1.png" class="product-img " />
+                                <div>
+                                    <p class="product-title">Nhẫn Panthère de Cartier</p>
+                                    <p class="product-sub">Chất liệu: Vàng</p>
+                                    <p class="product-sub">Size: M</p>
+                                    <p class="product-price">12.248.000 VNĐ</p>
+                                </div>
+                            </td>
+                            <td class="qty-box  ">
+                                <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+                                <input type="text" value="1" class="qty" readonly />
+                                <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+                            </td>
+                            <td class="subtotal  " data-price="12248000">12.248.000 VNĐ</td>
+                            <td  ><button class="remove-btn " onclick="removeRow(this)"><i class="fa-solid fa-trash-can" style="color:#fff;font-size:20px"></i></button></td>
+                        </tr>
+                    </tbody>
+                    <tbody id="cart-body" >
+                        <tr   >
+                            <td class="product-info ">
+                                <img src="image/pr-pay-bill-1.png" class="product-img " />
+                                <div>
+                                    <p class="product-title">Nhẫn Panthère de Cartier</p>
+                                    <p class="product-sub">Chất liệu: Vàng</p>
+                                    <p class="product-sub">Size: M</p>
+                                    <p class="product-price">12.248.000 VNĐ</p>
+                                </div>
+                            </td>
+                            <td class="qty-box  ">
+                                <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+                                <input type="text" value="1" class="qty" readonly />
+                                <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+                            </td>
+                            <td class="subtotal  " data-price="12248000">12.248.000 VNĐ</td>
+                            <td  ><button class="remove-btn " onclick="removeRow(this)"><i class="fa-solid fa-trash-can" style="color:#fff;font-size:20px"></i></button></td>
+                        </tr>
+                    </tbody>
+                    <tbody id="cart-body" >
+                        <tr   >
+                            <td class="product-info ">
+                                <img src="image/pr-pay-bill-1.png" class="product-img " />
+                                <div>
+                                    <p class="product-title">Nhẫn Panthère de Cartier</p>
+                                    <p class="product-sub">Chất liệu: Vàng</p>
+                                    <p class="product-sub">Size: M</p>
+                                    <p class="product-price">12.248.000 VNĐ</p>
+                                </div>
+                            </td>
+                            <td class="qty-box  ">
+                                <button class="qty-btn" onclick="updateQty(this,-1)">−</button>
+                                <input type="text" value="1" class="qty" readonly />
+                                <button class="qty-btn" onclick="updateQty(this,1)">+</button>
+                            </td>
+                            <td class="subtotal  " data-price="12248000">12.248.000 VNĐ</td>
+                            <td  ><button class="remove-btn " onclick="removeRow(this)"><i class="fa-solid fa-trash-can" style="color:#fff;font-size:20px"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="summary">
+                    <p>Tạm tính: <span id="cart-total">0</span> VNĐ</p>
+                    <p>Phí vận chuyển: <span id="shipping">50.000</span> VNĐ</p>
+                    <p>Giảm giá: <span id="discount">0</span> VNĐ</p>
+                    <h3>Tổng thanh toán: <span id="grand-total">0</span> VNĐ</h3>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="btn btn-green">Thêm sản phẩm khác</button>
+                    <button class="btn btn-outline">Xóa tất cả</button>
+                </div>
+                
+            </div>
+            <div class="textarea">
+                <label for="message">Ghi chú cho đơn hàng</label><br>
+                <textarea class="mt-4 width:100%"style="background-color: #d9d9d9; border-radius: 10px; padding-top:50px;font-size: 16px;font-family: opensans-r;padding-left: 16px;"id="message" name="message" rows="12" cols="100" placeholder="Vui lòng đế lại ghi chú"></textarea>
+            </div>
+            <div class="payment">
+                <ul>
+                    <a href="#"><li><img src="image/payment1.jpg" alt="" class="w-100"></li></a>
+                    <a href="#"><li><img src="image/payment.jpg" alt="" class="w-100"></li></a>
+                    <a href="#"><li><img src="image/payment3.jpg" class="w-100"></li></a>
+                    <a href="#"><li><img src="image/payment4.jpg" alt="" class="w-100"></li></a>
+                    <a href="#"><li><img src="image/payment5.jpg" alt="" class="w-100"></li></a>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<footer class="bg-footer mt-5  ">
+    <div class="container">
+        <div class="row  ">
+            <div class="  col-lg-6 col-md-3 footer-logo">
+                <img src="image/logo_png.png" >
+                <p>Queen là thương hiệu trang sức nam nữ cao cấp </br>đem đến sự sang trọng, quý phái và may mắn</p>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>290 Bạch Đằng, Phường 14, Quận Bình Thạnh, HCM</p>
+                      </div>
+                </div>
+                <div class="info">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="footer content">
+                         <p>Gmail <span> queen@email.com</span> </p>
+                    </div>
+                  
+                </div>
+                <div class="info">
+                      <div class="footer-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <div class="footer content">
+                        <p>demo@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 ">
+                <h4 class="footer-tittle">Sản phẩm</h4>
+                <ul class="footer-nav">
+                   <li><a href="http://127.0.0.1:5500/product">Nhẫn nam nữ</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Vòng tay </a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Khuyên tai</a></li>
+                    <li><a href="http://127.0.0.1:5500/product">Lắc chân</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Dịch vụ</h4>
+                <ul class="footer-nav">
+                    <li><a href="http://127.0.0.1:5500/product-cart">Giao hàng</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Quà tặng </a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Tư vấn</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Thanh toán</a></li>
+                    <li><a href="http://127.0.0.1:5500/product-cart">Khác</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3  ">
+                <h4 class="footer-tittle">Tài khoản</h4>
+                <ul class="footer-nav">
+                     <li><a href="http://127.0.0.1:5500/payment">Đăng ký</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Đăng nhập</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Hồ sơ tài khoản</a></li>
+                    <li><a href="http://127.0.0.1:5500/payment">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="line"></div>
+<div class="container ">
+    <div class="row">
+        <div class="sub-form col-lg-3">
+            <input type="text" placeholder="Enter your mail ">
+
+        </div>
+        <div class="col-lg-9 social">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-square-instagram"></i></a></li>
+            </ul>
+           
+        </div>
+    </div>
+</div>
+</footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/easyzoom.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    let progress = 0;
+    const progressBar = document.getElementById("progress");
+    const truck = document.getElementById("truck");
+    const containerWidth = 500; // chiều rộng thanh
+    const truckWidth = 30; // độ rộng xe
+
+    function animate() {
+      if (progress <= 100) {
+        progress++;
+        progressBar.style.width = progress + "%";
+        // Vị trí xe chạy theo %
+        let pos = (progress / 100) * (containerWidth - truckWidth);
+        truck.style.left = pos + "px";
+      } else {
+        progress = 0; // reset chạy lại
+      }
+    }
+
+    setInterval(animate, 100); // tốc độ
+    document.getElementById("shippingForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let city = document.getElementById("city").value;
+      let result = document.getElementById("result");
+      let fee = 0;
+
+      switch(city) {
+        case "Hanoi":
+          fee = 20000;
+          break;
+        case "HCM":
+          fee = 25000;
+          break;
+        case "Danang":
+          fee = 30000;
+          break;
+        case "Other":
+          fee = 35000;
+          break;
+        default:
+          fee = 0;
+      }
+
+      if(fee > 0) {
+        result.innerHTML = "Phí vận chuyển: " + fee.toLocaleString("vi-VN") + "đ";
+      } else {
+        result.innerHTML = "Vui lòng chọn Tỉnh/Thành phố!";
+      }
+    });
+    <!--sản phẩm trong giỏ hàng-->
+    function updateQty(el, change) {
+  let row = el.closest("tr");
+  let qtyInput = row.querySelector(".qty");
+  let qty = Math.max(1, parseInt(qtyInput.value) + change);
+  qtyInput.value = qty;
+
+  let price = parseInt(row.querySelector(".subtotal").dataset.price);
+  row.querySelector(".subtotal").innerText = (price * qty).toLocaleString("vi-VN") + " VNĐ";
+  calcTotal();
+}
+
+function removeRow(el) {
+  el.closest("tr").remove();
+  calcTotal();
+}
+
+function calcTotal() {
+  let rows = document.querySelectorAll("#cart-body tr");
+  let total = 0;
+  rows.forEach(r => {
+    let price = parseInt(r.querySelector(".subtotal").dataset.price);
+    let qty = parseInt(r.querySelector(".qty").value);
+    total += price * qty;
+  });
+
+  let shipping = 50000;
+  let discount = 0;
+  document.getElementById("cart-total").innerText = total.toLocaleString("vi-VN");
+  document.getElementById("grand-total").innerText = (total + shipping - discount).toLocaleString("vi-VN");
+}
+calcTotal();
+
+  </script>
+    
+
+
+</html>
